@@ -8,6 +8,8 @@ defmodule RepoHero.Accounts.User do
     field :hashed_password, :string, redact: true
     field :confirmed_at, :naive_datetime
 
+    has_one :github_integration, RepoHero.GithubIntegration
+
     timestamps()
   end
 
